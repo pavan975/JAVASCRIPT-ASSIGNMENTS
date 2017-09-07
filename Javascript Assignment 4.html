@@ -1,0 +1,29 @@
+<html>
+<head><title>Javascript Assignment 2</title></head>
+<script type="text/javascript">
+function method1()
+{
+ alert("the image is blur");
+}
+
+window.onerror = function method2() { alert("An error occurred in loading image through onerror event");}
+
+</script>
+
+<body onLoad="alert('This is onLoad event')">
+<form action="https://www.google.co.in/?gws_rd=ssl" name="MyForm">
+<script>
+document.write("this is Dynamic webpage");
+</script>
+</br>
+<input type="button" value="on Click" onclick="alert('this is onClick event')"/>
+<img src="" border="1" width="100" height="200" onblur="method1();" onerror="method2();">
+<input type="button" value="on Blur" onclick="method1();"/>
+
+</br>
+</br>
+<input type="SUBMIT" value="SUBMIT">
+
+</form>
+</body>
+</html>
