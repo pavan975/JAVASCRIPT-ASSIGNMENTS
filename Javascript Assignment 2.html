@@ -1,0 +1,47 @@
+<html>
+<head><title>Javascript Assignment 2</title></head>
+
+<body>
+<script type="text/javascript">
+
+document.write("this is Dynamic webpage<br>");
+
+
+function innerfunc()
+{
+document.write("<br>Hello world from inner function<br>");
+}
+
+function outerfunc()
+{
+ var inn=new innerfunc();
+document.write("<br>hello world from outer function<br>");
+}
+
+
+var outerfunc=new outerfunc();
+
+
+/*
+function counter()
+{
+for(var count="1";count<100;count++)
+
+document.write("<br>"+count);
+document.write("This is Counter");
+
+}
+var count=new counter();
+*/
+
+document.write("<br>This is Counter of this page");
+document.write("<br>Refresh page to see counter working !<br>");
+if( sessionStorage.hits ){
+sessionStorage.hits = Number(sessionStorage.hits) +1;
+}else{sessionStorage.hits = 1;
+}
+document.write("Total Number of Visits to this page :" + sessionStorage.hits );
+
+</script>
+</body>
+</html>

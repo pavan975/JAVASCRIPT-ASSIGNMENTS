@@ -1,0 +1,51 @@
+<html>
+<head><title>JavaScript project 1</title>
+</head>
+<style>
+	h{color:Red;}
+</style>
+<body>
+<script type="text/javascript">
+document.write("<b><h>This is a Dynamic WEBPAGE</h></b>");
+document.write("<b><p>Empoyee Details</p1></b><br>");
+
+var name="pavan";
+var age=30;
+var DOB="02/09/1989";
+var place="Hyderabad";
+document.write("<br>Name is: "+name);
+document.write("<br>Age is: "+age);
+document.write("<br>Date of Birth is: "+DOB);
+document.write("<br>Place of Birth is: "+place);
+
+document.write("<b><p>Empoyee Details by Using OBJECT</p1></b><br>");
+
+function Details()
+{
+var name="Raj";
+var age=33;
+var DOB="02/02/1989";
+var place="Hyderabad";
+document.write("<p>Name of Emp: "+name+"<br>Age of Emp: "+age+"<br>DOB of Emp: "+DOB+"<br>Place of Emp: "+place);
+}
+var Emp=new Details();
+
+
+document.write("<b><p>Empoyee Details by Using PARAMETER OBJECT</p1></b><br>");
+function detail(name,age,dob,place)
+{
+this.name=name;
+this.age=age;
+this.dob=dob;
+this.place=place;
+}
+var Empdetails=new detail("ravi","22","03/03/2002","secunderabad");
+document.write("<br>Name of Emp: "+Empdetails.name+"<br>Age of Emp: "+Empdetails.age+"<br>DOB of Emp: "+Empdetails.dob+"<br>Place of Emp: "+Empdetails.place);
+
+
+
+// alert("The Employee Details\n\n"+" Name is: "+name+"\n Age is: "+age+"\n Date of Birth is: "+DOB+"\n Place is: "+place);
+</script>
+
+</body>
+</html>
