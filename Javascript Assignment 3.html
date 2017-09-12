@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+h1{color:Red; size:18px; align:centre;}
+div{color:blue;}
+</style>
+
+<script type="text/javascript">
+
+function valid()
+{
+ if (document.MyForm.username.value == ""){document.MyForm.username.style.border = '2px solid red';  alert("Username cannot be Blank");}
+else if (document.MyForm.firstname.value == ""){document.MyForm.firstname.style.border = '2px solid red'; alert("Firstname cannot be Blank");}
+else if (document.MyForm.lastname.value == ""){document.MyForm.lastname.style.border = '2px solid red'; alert("Lastname cannot be Blank");}
+else if (document.MyForm.mobile.value == "" || document.MyForm.mobile.value.length != 10){document.MyForm.mobile.style.border = '2px solid red'; alert("enter Valid 10 digits Mobile Number");}
+else if (document.MyForm.email.value != "" ){ 
+var emailstr = document.MyForm.email.value;
+if (emailstr.search("@") < 1){document.MyForm.email.style.border = '2px solid red';  alert("Enter Correct EMAIL ID");}}
+if (document.MyForm.email.value == "" ){alert("email id cannot be Blank");}
+else if (document.MyForm.country.value == ""){document.MyForm.country.style.border = '2px solid red'; alert("Country cannot be Blank");}
+else if (document.MyForm.city.value == ""){document.MyForm.city.style.border = '2px solid red'; alert("City cannot be Blank");}
+else if (document.MyForm.pincode.value == "" || document.MyForm.pincode.value.length != 6){document.MyForm.pincode.style.border = '2px solid red'; alert("enter VALID PINCODE");}
+else {alert("Form Submitted SUCCESSFUL");}
+}
+</script>
+</head>
+
+<body>
+<form name="MyForm">
+<h1>WELCOME TO LOGIN</h1>
+</br>
+<hr>
+</br>
+
+USER NAME: <input type="text" name="username" />
+</br>
+FIRST NAME: <input type="text" name="firstname" />
+LAST NAME: <input type="text" name="lastname" />
+</br>
+MOBILE: <input type="int" name="mobile" />
+</br>
+EMAIL ID: <input type="text" name="email" />
+</br>
+Country: <input type="text" name="country" />
+CITY: <input type="text" name="city" />
+</br>
+PINCODE: <input type="int" name="pincode" />
+</br>
+</br>
+<input type="submit" value="SUBMIT" onclick="valid();"/>
+
+
+</form>
+</body>
+</html>
